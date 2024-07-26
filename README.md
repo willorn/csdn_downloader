@@ -1,20 +1,53 @@
-# CSDN-DOWNLOADER
+# CSDN文章下载器
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+这是一个简单的Python脚本，用于下载CSDN博客文章并将其转换为Markdown格式。
 
-#### 软件架构
-软件架构说明
+## 功能
 
-#### 安装教程
+- 从CSDN文章URL爬取内容
+- 提取文章标题和正文
+- 将HTML内容转换为Markdown格式
+- 保存文章为Markdown文件
 
+## 依赖
 
+本脚本依赖以下Python库：
 
-#### 打包教程
+- re
+- parsel
+- tomd
+- requests
 
-```shell
-pip install pyinstaller
-pyinstaller --onefile --distpath . csdn_downloader.py
+您可以使用以下命令安装依赖：
+
 ```
+pip install parsel tomd requests
+```
+
+## 使用方法
+
+1. 运行脚本：
+
+```
+python csdn_downloader.py
+```
+
+2. 在提示时输入CSDN文章的URL。
+
+3. 脚本将下载文章并保存为Markdown文件，文件名为文章标题。
+
+4. 重复步骤2-3下载更多文章，或输入'exit'退出程序。
+
+## 注意事项
+
+- 请确保您有权下载和使用所爬取的内容。
+- 过度频繁的请求可能会导致您的IP被CSDN封禁。请合理使用本工具。
+- 本脚本仅用于学习和个人使用，请勿用于商业目的。
+
+## 贡献
+
+欢迎提交问题和拉取请求。对于重大更改，请先开issue讨论您想要改变的内容。
+
+## 许可
+
+[MIT](https://choosealicense.com/licenses/mit/)
